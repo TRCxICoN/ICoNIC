@@ -1,4 +1,7 @@
-/* Basic styling for the cart and modal */
+/* Global Reset and Base Styles */
+
+
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -14,21 +17,83 @@ th {
     background-color: #f4f4f4;
 }
 
+/* Payment Modal Styles */
 #payment-modal {
-    display: none;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+    width: 95%;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 95%;
-    max-width: 400px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    border-radius: 10px;
-    overflow: hidden;
+    padding: 20px;
 }
 
+#payment-modal .modal-content {
+    padding: 0;
+}
+
+#payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+#payment-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+    display: block;
+}
+
+#payment-form input, 
+#payment-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#payment-form input:focus, 
+#payment-form select:focus {
+    outline: none;
+    border-color: #004aad;
+    box-shadow: 0 0 5px rgba(0, 74, 173, 0.3);
+}
+
+#payment-form input:invalid {
+    border-color: #ff4d4d;
+}
+
+#card-details {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* Button Styles */
 .remove-item {
     background-color: red;
     color: white;
@@ -42,24 +107,79 @@ th {
     text-align: center;
 }
 
-.btn-remove:hover {
+.remove-item:hover {
     background-color: #900;
 }
 
-.modal-content {
-    padding: 15px; /* Reduced padding for mobile */
+.btn {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
     text-align: center;
 }
 
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
+.btn:hover {
+    background-color: #00337f;
 }
 
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#payment-form button[type="submit"] {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+#payment-form button[type="submit"]:hover {
+    background-color: #00337f;
+    transform: translateY(-2px);
+}
+
+#payment-form button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+}
+
+.modal.visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal .btn {
+    margin-top: 10px;
+}
+
+/* Cart and Bill Summary Styles */
 .bill-summary {
     max-width: 95%;
     margin: 0 auto;
@@ -122,58 +242,29 @@ th {
     gap: 10px;
 }
 
-.btn {
-    background-color: #004aad;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    flex: 1;
+/* Footer Styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
     text-align: center;
+    font-size: 12px;
 }
 
-.btn:hover {
-    background-color: #00337f;
+/* Form Validation Styles */
+#payment-form input:valid {
+    border-color: #28a745;
 }
 
-.btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.modal {
-    display: none;
-}
-
-.modal.visible {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 15px; /* Reduced padding */
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.modal .btn {
-    margin-top: 10px;
-}
-
-.modal.visible {
-    visibility: visible;
-    opacity: 1;
+#payment-form input:invalid {
+    border-color: #dc3545;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Optimize buttons and text for tablets and smaller devices */
     .btn {
         font-size: 13px;
         padding: 6px 10px;
@@ -186,6 +277,28 @@ th {
     .cart-item img {
         width: 45px;
         height: 45px;
+    }
+
+    #payment-modal {
+        width: 90%;
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    #payment-form {
+        gap: 10px;
+        padding: 15px;
+    }
+
+    #payment-form input, 
+    #payment-form select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #payment-form button[type="submit"] {
+        font-size: 14px;
+        padding: 10px 16px;
     }
 }
 
@@ -223,21 +336,7 @@ th {
         overflow-x: auto;
         white-space: nowrap;
     }
-}
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-    font-size: 12px;
-}
-
-/* Optional: Ensure modal width adjusts well */
-@media (max-width: 480px) {
     #payment-modal {
         width: 90%;
         max-width: 95%;
