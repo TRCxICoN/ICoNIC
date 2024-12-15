@@ -26,6 +26,34 @@ document.addEventListener('DOMContentLoaded', () => {
         totalPriceElement.textContent = totalPrice.toFixed(2);
     }
 
+    // Phone Number Validation Function
+    function validatePhoneNumber(phoneNumber) {
+        // Remove all non-digit characters
+        const cleanedNumber = phoneNumber.replace(/\D/g, '');
+        
+        // Validate phone number formats
+        const phoneRegex = {
+            // US Phone Number (10 digits)
+            US: /^(1\s?)?(\+?1\s?)?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/,
+            // International formats with country codes
+            International: /^(\+\d{1,3}[-\s]?)?(\(\d{1,4}\)|\d{1,4})[\s.-]?\d{3,4}[\s.-]?\d{3,4}$/
+        };
+
+        // Check US phone number format
+        if (phoneRegex.US.test(phoneNumber)) {
+            // Additional check for length after removing non-digits
+            return cleanedNumber.length >= 10 && cleanedNumber.length <= 15;
+        }
+
+        // Check international phone number format
+        if (phoneRegex.International.test(phoneNumber)) {
+            // Ensure number is between 10-15 digits
+            return cleanedNumber.length >= 10 && cleanedNumber.length <= 15;
+        }
+
+        return false;
+    }
+
     cartTableBody.addEventListener('click', (e) => {
         if (e.target.classList.contains('remove-item')) {
             let index = parseInt(e.target.dataset.index, 10);
@@ -57,13 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
                  <h2>Delivery and Payment Details</h2>
                  <form id="payment-form">
                      <label for="name">Name:</label>
-                     <input type="text" id="name" name="name" required><br>
+                     <input type="text" id="name" name="name" required 
+                            minlength="2" maxlength="50" 
+                            pattern="[A-Za-z\s]+" 
+                            title="Name must contain only letters and spaces"><br>
 
                      <label for="phone">Phone Number:</label>
-                     <input type="text" id="phone" name="phone" required pattern="[0-9]+" title="Please enter numbers only"><br>
+                     <input type="tel" id="phone" name="phone" required 
+                            placeholder="Enter phone number (e.g., +1 (123) 456-7890)"
+                            title="Please enter a valid phone number"><br>
 
                      <label for="address">Address:</label>
-                     <input type="text" id="address" name="address" required><br>
+                     <input type="text" id="address" name="address" required 
+                            minlength="5" maxlength="100"><br>
 
                      <label for="payment-method">Payment Method:</label>
                      <select id="payment-method" name="payment-method" required>
@@ -114,7 +148,31 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('payment-form').addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Additional validation for card details
+            // Validate Name
+            const name = document.getElementById('name').value.trim();
+            if (!/^[A-Za-z\s]{2,50}$/.test(name)) {
+                alert('Please enter a valid name (2-50 letters)');
+                return;
+            }
+
+            // Validate Phone Number
+            const phoneInput = document.getElementById('phone');
+            const phoneNumber = phoneInput.value.trim();
+            
+            if (!validatePhoneNumber(phoneNumber)) {
+                alert('Please enter a valid phone number. Example: +1 (123) 456-7890');
+                phoneInput.focus();
+                return;
+            }
+
+            // Validate Address
+            const address = document.getElementById('address').value.trim();
+            if (address.length < 5 || address.length > 100) {
+                alert('Please enter a valid address (5-100 characters)');
+                return;
+            }
+            
+            // Validate Card Details if Card Payment
             let paymentMethod = document.getElementById('payment-method').value;
             
             if (paymentMethod === 'card') {
