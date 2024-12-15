@@ -1,0 +1,83 @@
+/* Container for the grid of doctor cards */
+.doctors-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+/* Style for each doctor card */
+.doctor-card {
+    display: flex; 
+    flex-direction: row; 
+    background-color: #e9ecef; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center; 
+    margin-bottom: 20px; 
+    position: relative; 
+    width: 97%; 
+}
+
+/* Style for the doctor’s image */
+.doctor-img {
+    max-width: 150px; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-right: 20px; 
+}
+
+/* Container for doctor’s information */
+.doctor-info {
+    flex: 1;
+}
+
+/* Style for doctor’s name and title */
+.doctor-info h3 {
+    margin-top: 0; 
+    margin-bottom: 10px; 
+}
+
+/* Style for doctor’s description */
+.doctor-info p {
+    margin: 0 0 20px; 
+    line-height: 1.6; 
+}
+
+/* Style for the appointment button */
+.appointment-button {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    position: absolute; 
+    right: 20px; 
+    bottom: 20px; 
+}
+
+/* Style for button hover state */
+.appointment-button:hover {
+    background-color: #0056b3; 
+}
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    .doctor-card {
+        flex-direction: column; 
+        text-align: center; 
+        position: static; 
+    }
+
+    .doctor-img {
+        margin: 0 auto 20px; 
+    }
+
+    .appointment-button {
+        position: static; 
+        margin-top: 20px;
+        display: block; 
+    }
+}

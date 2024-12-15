@@ -1,0 +1,270 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #004494;
+    --background-light: #e9f7fe;
+    --text-color: #333;
+    --white: #fff;
+    --border-color: #bdc3c7;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+/* Medicine Section Styling */
+.medicine-category {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.medicine-category h3 {
+    width: 100%;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.medicine-item {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 calc(25% - 25px);
+    min-width: 250px;
+}
+
+.medicine-box {
+    border: 2px solid transparent;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.medicine-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.medicine-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.medicine-box:hover .medicine-image {
+    transform: scale(1.05);
+}
+
+.medicine-box p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.medicine-box label,
+.medicine-box input,
+.medicine-box button {
+    display: block;
+    margin: 8px auto;
+    width: 100%;
+}
+
+.medicine-box input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.medicine-box input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.medicine-box button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.medicine-box button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Cart Table */
+#cart-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#cart-table th, #cart-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: center;
+}
+
+#cart-table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+#cart-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#cart-table .remove-item {
+    background-color: #dc3545;
+    color: var(--white);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cart-table .remove-item:hover {
+    background-color: #c82333;
+}
+
+/* Total Price */
+#total-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: right;
+    color: var(--text-color);
+}
+
+/* Action Buttons */
+#clear-cart, 
+#add-to-favorites, 
+#apply-favorites, 
+#buy-now {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+#buy-now {
+    margin-bottom: 15px;
+}
+
+#clear-cart {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+#clear-cart:hover {
+    background-color: var(--secondary-color);
+}
+
+#add-to-favorites {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+#add-to-favorites:hover {
+    background-color: var(--secondary-color);
+}
+
+#apply-favorites {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+#apply-favorites:hover {
+    background-color: var(--secondary-color);
+}
+
+#buy-now {
+    background-color: var(--primary-color);
+    color: var(--white);
+    
+}
+
+#buy-now:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .medicine-item {
+        flex: 1 1 calc(50% - 25px);
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .medicine-item {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .medicine-image {
+        width: 150px;
+        height: 150px;
+    }
+}

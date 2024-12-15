@@ -1,0 +1,122 @@
+/* Container for reservation section, with flex layout for responsive design */
+/* Ensure the main content fills the viewport and pushes the footer down */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body fills the viewport height */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* Allow the main content to expand and push the footer down */
+}
+
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.reservation-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+/* Style for contact information section */
+.contact-info {
+    height: 420px; 
+    flex: 1;
+    background-color: #e9ecef; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for reservation form section */
+.reservation-form {
+    flex: 2; 
+    max-height: 100%; 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Flex layout for form rows to allow spacing between fields */
+.form-row {
+    display: flex;
+    gap: 20px; 
+    margin-bottom: 20px;
+}
+
+/* Style for form groups, flex layout to stack label and input */
+.form-group {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Style for form groups that should take more space */
+.form-group.full-width {
+    flex: 2; 
+}
+
+/* Style for labels */
+label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+/* Style for all form inputs and text areas */
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%; 
+    padding: 8px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Prevent textarea from being resized */
+textarea {
+    resize: none;
+}
+
+/* Style for submit button */
+.submit-btn {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 10px; 
+}
+
+/* Style for submit button on hover */
+.submit-btn:hover {
+    background-color: #0056b3; 
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .reservation-container {
+        flex-direction: column; 
+    }
+
+    .form-row {
+        flex-direction: column; 
+    }
+
+    .contact-info {
+        display: none; 
+    }
+
+    .reservation-form {
+        flex: 1; 
+    }
+}

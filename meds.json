@@ -1,0 +1,55 @@
+[
+    {
+        "category": "Analgesics",
+        "medicines": [
+            { "name": "Acetaminophen", "price": 2, "image": "Acetaminophen.jpg" },
+            { "name": "Ketorolac", "price": 2.5, "image": "Ketorolac.jpg" },
+            { "name": "Codeine", "price": 3, "image": "Codeine.jpg" },
+            { "name": "Meperidine", "price": 2.8, "image": "Meperidine.jpg" },
+            { "name": "Oxymorphone", "price": 3, "image": "Oxymorphone.jpg" },
+            { "name": "Butorphanol", "price": 2.5, "image": "Butorphanol.jpeg" }
+        ]
+    },
+    {
+        "category": "Antibiotics",
+        "medicines": [
+            { "name": "Clindamycin", "price": 2.8, "image": "Clindamycin.jpg" },
+            { "name": "Erythromycin", "price": 2.6, "image": "Erythromycin.jpeg" },
+            { "name": "Levofloxacin", "price": 3, "image": "Levocetirizine.jpeg" },
+            { "name": "Tetracycline", "price": 2.7, "image": "Tetracycline.avif" },
+            { "name": "Vancomycin", "price": 3, "image": "Vancomycin.jpeg" },
+            { "name": "Rifampin", "price": 2.9, "image": "Rifampin.jpeg" }
+        ]
+    },
+    {
+        "category": "Antidepressants",
+        "medicines": [
+            { "name": "Nortriptyline", "price": 2.9, "image": "Nortriptyline.jpeg" },
+            { "name": "Mirtazapine", "price": 3, "image": "Mirtazapine.jpeg" },
+            { "name": "Desvenlafaxine", "price": 2.7, "image": "Desvenlafaxine.jpeg" },
+            { "name": "Imipramine", "price": 2.8, "image": "Imipramine.jpeg" },
+            { "name": "Doxepin", "price": 3, "image": "Doxepin.jpeg" },
+            { "name": "Trazodone", "price": 2.6, "image": "Trazodone.jpeg" }
+        ]
+    },
+    {
+        "category": "Antihistamines",
+        "medicines": [
+            { "name": "Chlorpheniramine", "price": 2.5, "image": "Chlorpheniramine.jpeg" },
+            { "name": "Levocetirizine", "price": 2.6, "image": "Levocetirizine.jpeg" },
+            { "name": "Rupatadine", "price": 2.7, "image": "Rupatadine.jpeg" },
+            { "name": "Bilastine", "price": 2.8, "image": "Bilastine.jpeg" }
+        ]
+    },
+    {
+        "category": "Antihypertensives",
+        "medicines": [
+            { "name": "Nifedipine", "price": 2.9, "image": "Nifedipine.jpeg" },
+            { "name": "Bisoprolol", "price": 2.7, "image": "Bisoprolol.jpeg" },
+            { "name": "Irbesartan", "price": 3, "image": "Irbesartan.jpeg" },
+            { "name": "Hydralazine", "price": 2.8, "image": "Hydralazine.jpeg" },
+            { "name": "Chlorthalidone", "price": 2.6, "image": "Chlorthalidone.jpeg" },
+            { "name": "Prazosin", "price": 2.5, "image": "Prazosin.jpeg" }
+        ]
+    }
+]

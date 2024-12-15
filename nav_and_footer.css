@@ -1,0 +1,205 @@
+/* Basic reset and setup for body */
+body {
+    background-color: #e9f7fe;
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+/* Styling for header */
+header {
+    background-color: #007bff;
+    padding: 50px;
+    position: relative; 
+    display: flex; 
+    align-items: center;
+}
+
+/* Container for logo and navigation */
+.header-content {
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+}
+
+/* Styling for the logo and navigation container */
+.logo-nav-container {
+    position: absolute; 
+    left: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+/* Logo styling */
+.logo {
+    max-height: 200px; 
+    max-width: 200px; 
+    margin-top: 45px; 
+    margin-bottom: 5px; 
+}
+
+/* Navigation bar styling */
+.nav-bar {
+    display: flex;
+    margin-bottom: 65px; 
+    flex-direction: row; 
+    align-items: center; 
+    margin-top: 1px; 
+}
+
+/* Styling for navigation links */
+.nav-bar a {
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    display: block;
+}
+
+/* Hover effect for navigation links */
+.nav-bar a:hover {
+    background-color: #004494; 
+}
+
+/* Hospital name styling */
+.hospital-name {
+    margin-top: -20px;
+    padding-left: 50px;
+    color: #121112; 
+    font-size: 40px; 
+    text-align: center; 
+    width: 90%; 
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 10px;
+}
+
+/* Show the hamburger menu on small screens */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block; /* Show hamburger button */
+    }
+
+    .nav-bar {
+        display: none; /* Hide navigation by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #007bff;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .nav-bar a {
+        padding: 10px; 
+        width: 100%; 
+        text-align: center; 
+        color: #fff; 
+        text-decoration: none; 
+    }
+
+    .nav-bar.active {
+        display: flex; /* Show navigation bar when the hamburger is clicked */
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .hospital-name {
+        padding-right: 60px;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-nav-container {
+        position: static; 
+        align-items: center; 
+        width: 100%; 
+    }
+
+    .nav-bar a:hover {
+        background-color: #004494; 
+    }
+}
+
+/* Styling for content section */
+.content {
+    margin-top: 30px; 
+    padding: 20px; 
+    flex: 1; 
+}
+
+/* Styling for footer */
+footer {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 0; 
+}
+
+/* Container for footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px; 
+    width: 90%; 
+}
+
+/* Footer navigation styling (hidden by default) */
+.footer-nav {
+    display: none; 
+}
+
+/* Responsive styles for footer navigation on larger screens */
+@media (min-width: 769px) {
+    .footer-nav {
+        display: flex; 
+        justify-content: flex-end; 
+    }
+
+    .footer-nav a {
+        color: #fff; 
+        text-decoration: none; 
+        padding: 10px 15px; 
+    }
+
+    .footer-nav a:hover {
+        background-color: #004494;
+    }
+
+    .footer-copyright {
+        text-align: left; 
+        flex: 1;
+    }
+}
+
+/* Responsive styles for footer on mobile devices */
+@media (max-width: 768px) {
+    .footer-nav {
+        display: none; 
+    }
+
+    .footer-copyright {
+        text-align: center; 
+        width: 100%; 
+    }
+}

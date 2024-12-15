@@ -1,0 +1,160 @@
+/* Hero section styling */
+.hero {
+    width: 100%;
+    height: 400px; 
+    background-image: url('../image/wallpaperflare.com_wallpaper.jpg'); 
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 100px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Introduction section styling */
+.intro {
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+/* Services section styling */
+.services {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+/* Individual service card styling */
+.services .service {
+    flex: 1 1 30%;
+    background-color: #e9ecef; 
+    margin: 5px; 
+    padding: 5px; 
+    text-align: center; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Service image styling */
+.services .service img {
+    max-width: 30%; 
+    height: auto; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+}
+
+/* Bullet list section styling */
+.bullet-list-section, .numbered-list-section {
+    display: flex; 
+    margin-top: 20px; 
+    padding: 15px; 
+    background-color: #f0f0f0; 
+    border-radius: 15px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styling for unordered and ordered lists inside sections */
+.bullet-list-section ul, .numbered-list-section ol {
+    margin: 0; 
+    padding: 0; 
+    list-style-position: inside; 
+}
+
+/* Additional styling for ordered lists */
+.Ordered_list {
+    padding-top: 10px;
+}
+
+/* Styling for list items with images and links */
+.list-image-link {
+    display: inline-block; 
+    margin-right: 15px; 
+}
+
+/* Flexbox layout for image and list items */
+.image-and-list {
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+}
+
+/* Image styling inside the list */
+.list-image {
+    max-width: 150px; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+/* Styling for unordered lists inside image and list sections */
+.image-and-list ul {
+    margin: 0; 
+    padding: 0; 
+    list-style-position: inside; 
+}
+
+/* Styling for bullet list items */
+.bullet-list-section ul {
+    margin: 0; 
+    padding: 0; 
+    list-style-position: inside; 
+}
+
+/* Space below list items */
+.bullet-list-section li {
+    margin-bottom: 10px; 
+}
+
+/* Sub-section styling */
+.sub-section {
+    margin: 20px 0; 
+    padding: 15px; 
+    background-color: #e9ecef; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Title styling inside sub-sections */
+.sub-section-title {
+    font-size: 24px; 
+    margin-bottom: 15px; 
+}
+
+/* Content styling inside sub-sections */
+.sub-section-content {
+    display: flex; 
+    align-items: flex-start; 
+}
+
+/* Image styling inside sub-sections */
+.sub-section-image {
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-right: 20px; 
+}
+
+/* Text styling inside sub-sections */
+.sub-section-text {
+    flex: 1; 
+}
+
+/* Paragraph styling inside sub-sections */
+.sub-section-text p {
+    margin-bottom: 15px; 
+}
+
+/* Additional padding for .head-2 class */
+.head-2 {
+    padding-left: 10px; 
+}
+/* Mobile styling: Image above text */
+@media (max-width: 768px) {
+    .sub-section-content {
+        flex-direction: column; 
+    }
+
+    .sub-section-image {
+        margin-right: 0; 
+        margin-bottom: 15px;
+        max-width: 100%; 
+    }
+}

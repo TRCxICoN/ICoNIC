@@ -1,0 +1,132 @@
+.content {
+    padding: 20px;
+}
+
+/* Main service content - desktop layout */
+.main-service-content {
+    display: flex; 
+    align-items: center; 
+    padding: 20px; 
+}
+
+.main-service-img {
+    flex: 0 0 auto; 
+    max-width: 50%;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-service-details {
+    flex: 1;
+    padding-left: 40px;
+    padding: 20px;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Services intro section styling */
+#services-intro {
+    margin-bottom: 40px; 
+    text-align: center;
+}
+
+#services-intro h2 {
+    margin: 0 0 10px; 
+}
+
+#services-intro p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Main service details styling */
+.main-service-details h2 {
+    margin-top: 0; 
+}
+
+.main-service-details p {
+    margin-top: 10px; 
+    line-height: 1.6;
+}
+
+/* Other services section styling */
+#other-services {
+    margin-bottom: 40px;
+}
+
+#other-services h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Flex layout for service boxes */
+.service-boxes {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.service-box {
+    flex: 1 1 200px; 
+    background-color: #e9ecef; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.service-box img {
+    border-radius: 5px; 
+    width: 100%; 
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px; 
+}
+
+.service-box h3 {
+    margin: 10px 0; 
+}
+
+.service-box p {
+    margin: 0; 
+    line-height: 1.6; 
+}
+
+/* Patient registration section styling */
+#patient-registration {
+    text-align: center; 
+}
+
+.registration-link {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px; 
+}
+
+.registration-link:hover {
+    background-color: #0056b3; 
+}
+
+/* Mobile responsiveness - stack content vertically */
+@media (max-width: 768px) {
+    .main-service-content {
+        display: block; 
+        text-align: center; 
+    }
+
+    .main-service-img {
+        max-width: 100%; 
+        margin: 0 auto 20px; 
+    }
+
+    .main-service-details {
+        padding: 20px; 
+        box-shadow: none; 
+        text-align: left; 
+    }
+}

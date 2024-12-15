@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Summary - IKONIC Healthcare</title>
+    <link rel="stylesheet" href="billing-summary.css">
+    <link rel="stylesheet" href="nav_and_footer.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-nav-container">
+                <img src="logo.png" alt="Hospital Logo" class="logo">
+                <nav class="nav-bar">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About Us</a>
+                    <a href="doctors.html">Doctors</a>
+                    <a href="reservation.html">Reservation</a>
+                    <a href="pharmacy.html">Pharmacy</a>
+                    <a href="billing-summary.html">Billing Summary</a>
+                </nav>
+            </div>
+            <h1 class="hospital-name">IKONIC Healthcare</h1>
+        </div>
+    </header>
+    <main>
+        <div class="bill-summary">
+            <!-- Cart Table -->
+            <div class="cart-container">
+                <table id="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JavaScript dynamically populates cart items here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Total Price Section -->
+            <div class="total-container">
+                <div class="total-price">Total: $<span id="total-price">0.00</span></div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button id="clear-cart" class="btn">Clear Cart</button>
+                <button id="pay-now" class="btn">Pay</button>
+            </div>
+        </div>
+        <div>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" aria-label="Toggle navigation">&#9776;</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p class="footer-copyright">&copy; 2024 IKONIC Healthcare. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About Us</a>
+                <a href="doctors.html">Doctors</a>
+                <a href="reservation.html">Reservation</a>
+                <a href="pharmacy.html">Pharmacy</a>
+                <a href="billing-summary.html">Billing Summary</a>
+            </nav>
+        </div>
+    </footer>
+    <script defer src="billing-summry.js"></script>
+    <script defer src="nav.js"></script>
+</body>
+</html>

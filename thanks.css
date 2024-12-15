@@ -1,0 +1,38 @@
+/* Ensure the full height of html and body, remove default margins and paddings */
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex container for body to ensure footer sticks to the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Style for the thank you message section */
+.thanks-message {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    background-color: #e9f7fe; 
+    padding: 20px; 
+}
+
+/* Style for the footer */
+footer {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 0; 
+    text-align: center; 
+    width: 100%;
+}
+
+/* Ensure no margin on footer paragraph */
+footer p {
+    margin: 0;
+}
