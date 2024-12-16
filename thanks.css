@@ -1,38 +1,71 @@
-/* Ensure the full height of html and body, remove default margins and paddings */
-html, body {
-    height: 100%; 
+/* Thanks Page Specific Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    color: #333;
 }
-
-/* Flex container for body to ensure footer sticks to the bottom */
-body {
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-/* Style for the thank you message section */
-.thanks-message {
-    flex: 1; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
+main {
+    flex: 1; /* Pushes the footer to the bottom */
+}
+
+
+.thank-you-message {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #e9f7fe; 
-    padding: 20px; 
 }
 
-/* Style for the footer */
+.thank-you-message h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.thank-you-message p {
+    color: #7f8c8d;
+    font-size: 1.1em;
+}
+
+#payment-details {
+    margin-top: 20px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#payment-date {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.2em;
+}
+
 footer {
-    background-color: #007bff; 
-    color: #fff; 
-    padding: 10px 0; 
-    text-align: center; 
-    width: 100%;
+    background-color: #007bff; /* Add your footer background color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
 
-/* Ensure no margin on footer paragraph */
-footer p {
-    margin: 0;
+@media (max-width: 600px) {
+    .thank-you-message {
+        margin: 20px;
+        padding: 20px;
+    }
 }
