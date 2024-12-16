@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You - IKONIC Healthcare</title>
-    <!--Links-->
+    <!-- Links -->
     <link rel="stylesheet" href="thanks.css">
     <link rel="stylesheet" href="nav_and_footer.css"> 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -39,14 +39,53 @@
             <h2>Thank You for Your Order!</h2> <!-- Thank you heading -->
             <p>Your order has been successfully processed. We appreciate your business and look forward to serving you again.</p> <!-- Thank you message -->
         </div>
-        <div>
-            <!-- Hamburger Menu Button -->
-            <button class="hamburger-menu" aria-label="Toggle navigation">
-                &#9776; <!-- Hamburger Icon -->
-            </button>
-        </div>
-        <script defer src="nav.js"></script>
     </main>
+    <script defer src="nav.js"></script>
+    
+
+    <!-- JavaScript Code for Delivery Date -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create payment details container
+            let paymentDetailsDiv = document.createElement('div');
+            paymentDetailsDiv.id = 'payment-details';
+            
+            // Get current date and add 7 days
+            let currentDate = new Date();
+            let futureDate = new Date();
+            futureDate.setDate(currentDate.getDate() + 7);
+            
+            // Format date options
+            let dateOptions = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            
+            // Format the future date
+            let formattedDate = futureDate.toLocaleDateString('en-US', dateOptions);
+            
+            // Create date display element
+            let paymentDateElement = document.createElement('p');
+            paymentDateElement.innerHTML = `
+                <strong>Delivered within </strong><br>
+                <span id="payment-date">${formattedDate}</span>
+            `;
+            
+            // Add to payment details div
+            paymentDetailsDiv.appendChild(paymentDateElement);
+            
+            // Find the thank you message div and insert payment details
+            let thankYouMessageDiv = document.querySelector('.thank-you-message');
+            if (thankYouMessageDiv) {
+                thankYouMessageDiv.appendChild(paymentDetailsDiv);
+            }
+        });
+    </script>
 
     <footer>
         <div class="footer-content">
